@@ -1,0 +1,61 @@
+img {
+    width: 200px;
+}
+
+.fantasma {
+    width: 130px;
+}
+
+.div-flex {
+    background-color: aqua;
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.espacado1 {
+    justify-content: space-between;
+}
+
+.espacado2 {
+    justify-content: space-around;
+}
+
+.centralizado{
+    justify-content: center;
+}
+
+.direita {
+    justify-content: flex-end;
+}
+
+.direita-amarelo {
+    justify-content: space-between; 
+}
+
+.amarelo {
+    background-color: yellow;
+    display: flex;
+}
+
+.amarelo-novo {
+    background-color: yellow;
+    display: flex;
+    justify-content: space-between;
+    width: 960px;
+}
+
+.coluna{
+    flex-direction:column;
+    height: 960px;
+    align-items: flex-start;
+}
+
+.coluna2{
+    flex-direction:column;
+    height: 960px;
+}
+
+.roxo{
+    display: flex;
+    background-color: rgb(226, 157, 226);
+}
