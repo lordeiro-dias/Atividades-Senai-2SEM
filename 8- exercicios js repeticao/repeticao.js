@@ -111,7 +111,7 @@
 // }
 
 // else{
-//     while(numUser != numRandom){
+//     while(numUser != numRandom){ 
 //         if(numUser < numRandom){
 //             numUser = parseInt(prompt("O número " + numUser + " é menor do que o número sorteado, digite outro."));
 //         }
@@ -128,8 +128,9 @@
 
 // let num = parseInt(prompt("Digite um número positivo para contagem regressiva"));
 
+// console.log(num);
 // while(num >= 0){
-//     console.log(num--);
+//     console.log(--num);
 // }
 
 
@@ -137,8 +138,20 @@
 //! 1- Soma dos digitos de um número:
 
 // let num = parseInt(prompt("Digite um número inteiro e positivo"));
+// let soma = 0;
 
-// while(num)
+// if(num >= 0){
+//     while(num > 0){
+//         soma += num % 10; // pega o último dígito
+//         num = Math.floor(num / 10); // remove o último digito
+//     }
+
+//     console.log("A soma dos dígitos é ", soma);
+// }
+
+// else{
+//     console.log("O número precisa ser inteiro e positivo");
+// }
 
 //! 2- Fatorial de um número:
 
@@ -154,13 +167,21 @@
 //! 3- Inverter um número:
 
 // let numero = parseInt(prompt("Digite um número"));
+// let numeroInvertido = 0;    
 
-// while(numero);
+// while(numero > 0){
+//     let unidade = numero % 10;
+//     numeroInvertido = unidade + numeroInvertido * 10;
+//     numero = (numero - unidade) / 10; 
+// }
+
+// console.log(numeroInvertido);
 
 //! 4- Números perfeitos de 1 a 1000:
+
 let numPerf = [];
-let counter = 0;
-let contador = 0;
+let contadorNumPerf = 0;
+let contadorDivisores = 0;
 let divisores = []; 
 let soma = 0;
 let contadorSoma = 0;
@@ -169,8 +190,8 @@ for(let i = 0; i <= 1000; i++)
 {
     for(let k = 0; k <= i; k++){
         if(i % k == 0 && k != i){
-            divisores[contador] = k;
-            contador++;
+            divisores[contadorDivisores] = k;
+            contadorDivisores++;
         }
     }
 
@@ -179,17 +200,15 @@ for(let i = 0; i <= 1000; i++)
         contadorSoma++;
     }
 
-    if(i == soma){
-        numPerf[counter] = i;
-        counter++;
+    if(i == soma && i != 0){
+        numPerf[contadorNumPerf] = i;
+        contadorNumPerf++;
     }
 
-    contador = 0;
+    contadorDivisores = 0;
     divisores = [];
     soma = 0;
     contadorSoma = 0;
 }
 
-for(let i = 1; i < numPerf.length; i++){
-    console.log(numPerf[i]);
-}
+console.log(numPerf);
